@@ -92,6 +92,11 @@ function restartGame() {
     console.log(game)
     if (game === 3 || scoreIA === 2 || scorePlayer === 2) {
         console.log('PARTIE TERMINEE');
+        game = 0;
+        scoreIA = 0;
+        scorePlayer = 0;
+        document.getElementById('score-ia').innerHTML = 0;
+        document.getElementById('score-player').innerHTML = 0;
     }
     else {
         console.log('LA PARTIE CONTINUE')   
