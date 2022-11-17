@@ -100,6 +100,8 @@ function restartGame() {
         scorePlayer = 0;
         document.getElementById('score-ia').innerHTML = 0;
         document.getElementById('score-player').innerHTML = 0;
+        document.getElementById("command").hidden = true;
+        restart.setAttribute("class","btn-restart")
     }
     else {
         console.log('LA PARTIE CONTINUE')   
