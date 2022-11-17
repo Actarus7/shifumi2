@@ -10,3 +10,20 @@ fu.addEventListener('click', () => console.log('fu'));
 mi.addEventListener('click', () => console.log('mi'));
 
 // Pour le reste, a vous de jouer
+
+
+
+function playerScore () {
+
+    if (shi.addEventListener('click', () => console.log('shi')) = 'shi') {
+        playerChoice = 'shi';
+    }
+    else if (fu.addEventListener('click', () => console.log('fu')) = 'fu') {
+        playerChoice = 'fu';
+    }
+    else {
+        playerChoice = 'mi';
+    }
+    
+}
+console.log(playerScore())
