@@ -25,19 +25,17 @@ function resultRandomIaChoice() {
 
 function playerScore (playerChoice) {
     if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
-        player.src = "/img/shi.png"; 
+        //player.src = "/img/shi.png"; 
         playerChoice = 'shi';
     }
     else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
-        player.src="/img/fu.png";
+        //player.src="/img/fu.png";
         playerChoice = 'fu';
     }
-    else if (mi.addEventListener('click', () => console.log('mi'))){
-        player.src="/img/mi.png";
+    else if (mi.addEventListener('click', () => console.log('mi')) == 'mi'){
+        //player.src="/img/mi.png";
         playerChoice = 'mi';}
-    else {
-        return playerChoice
-    }
+    console.log(playerChoice)
 }
 //console.log(playerScore())
 
@@ -68,4 +66,7 @@ function compare(choice){
 
 //console.log(resultRandomIaChoice());
 console.log(compare("shi"))
+
+
+
 
