@@ -12,11 +12,13 @@ mi.addEventListener('click', () => console.log('mi'));
 // Pour le reste, a vous de jouer 
 
 let arrayIaChoice = ["shi","fu","mi"];
+let scoreIA = 0
+let scorePlayer = 0
+
 
 function resultRandomIaChoice() {
     let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
     return randomIaChoice
-<<<<<<< HEAD
 }    
 //console.log(resultRandomIaChoice());
 
@@ -41,37 +43,29 @@ function playerScore (playerChoice) {
 
 
 
-
-=======
-}
-
 function compare(choice){
-    if (choice===resultRandomIaChoice()) {
+    let IAChoice = resultRandomIaChoice();
+    if (choice===IAChoice) {
+        console.log(choice + "/" + IAChoice);
         console.log("EGALITE");
+        console.log(scorePlayer + " - " + scoreIA)
     }
-    else if (choice==="shi" && resultRandomIaChoice()==="fu" || 
-            choice==="fu" && resultRandomIaChoice()==="mi" || 
-            choice==="mi" && resultRandomIaChoice()==="shi"){
+    else if (choice==="shi" && IAChoice==="fu" || 
+            choice==="fu" && IAChoice==="mi" || 
+            choice==="mi" && IAChoice==="shi"){
+        console.log(choice + "/" + IAChoice);
         console.log("YOU WIN");
         ++scorePlayer;
+        console.log(scorePlayer + " - " + scoreIA)
     }
     else {
+        console.log(choice + "/" + IAChoice);
         console.log("YOU LOOSE");
         ++scoreIA;
+        console.log(scorePlayer + " - " + scoreIA)
     }
 }
 
-
-
-
-    
-
-
 //console.log(resultRandomIaChoice());
-<<<<<<< HEAD
-console.log(compare("mi"))
-=======
-console.log(compare())
->>>>>>> 61de414a8da007203e91871b2bf7d747d5cfc858
->>>>>>> 66f5b9f3d416b0d9be3c3bfa601dfb9caecb5f18
+console.log(compare("shi"))
 
