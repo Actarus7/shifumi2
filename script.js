@@ -51,8 +51,8 @@ function compare(choice){
         console.log(scorePlayer + " - " + scoreIA)
     }
     else if (choice==="shi" && IAChoice==="fu" || 
-            choice==="fu" && IAChoice==="mi" || 
-            choice==="mi" && IAChoice==="shi"){
+    choice==="fu" && IAChoice==="mi" || 
+    choice==="mi" && IAChoice==="shi"){
         console.log(choice + "/" + IAChoice);
         console.log("YOU WIN");
         ++scorePlayer;
