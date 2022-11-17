@@ -15,8 +15,8 @@ mi.addEventListener('click', () => console.log('mi'));
 let arrayIaChoice = ["shi","fu","mi"];
 
 function resultRandomIaChoice() {
-    let randomIachoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
-    return randomIachoice
+    let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
+    return randomIaChoice
 }
 
 
