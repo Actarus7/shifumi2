@@ -29,7 +29,6 @@ function playerScore (playerChoice) {
 }
 console.log(playerScore())
 
-
 let arrayIaChoice = ["shi","fu","mi"];
 
 function resultRandomIaChoice() {
