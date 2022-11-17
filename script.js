@@ -5,9 +5,9 @@ const player = document.getElementById('player');
 const ia = document.getElementById('ia');
 const command = document.getElementById('command');
 
-shi.addEventListener('click', () => console.log('shi'));
-fu.addEventListener('click', () => console.log('fu'));
-mi.addEventListener('click', () => console.log('mi'));
+shi.addEventListener('click', () => shiPlayer());
+fu.addEventListener('click', () => fuPlayer());
+mi.addEventListener('click', () => miPlayer());
 
 // Pour le reste, a vous de jouer 
 
@@ -25,22 +25,21 @@ function resultRandomIaChoice() {
 
 function playerScore (playerChoice) {
     if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
-        player.src = "/img/shi.png"; 
+        player.setAttribute(src = "/img/shi.png"); 
         playerChoice = 'shi';
     }
     else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
-        player.src="/img/fu.png";
+        //player.src="/img/fu.png";
         playerChoice = 'fu';
     }
     else if (mi.addEventListener('click', () => console.log('mi'))){
-        player.src="/img/mi.png";
+        //player.src="/img/mi.png";
         playerChoice = 'mi';}
     else {
         return playerChoice
     }
 }
 //console.log(playerScore())
-
 
 
 function compare(choice){
@@ -66,6 +65,19 @@ function compare(choice){
     }
 }
 
+
+function shiPlayer () {
+    compare("shi")
+}
+
+function fuPlayer () {
+    compare("fu")
+}
+
+function miPlayer () {
+    compare("mi")
+}
+
 //console.log(resultRandomIaChoice());
-console.log(compare("shi"))
+//console.log(compare("shi"))
 
