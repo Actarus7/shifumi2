@@ -18,11 +18,22 @@ function resultRandomIaChoice() {
     let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
     return randomIaChoice
 }
+let choice1 = "shi";
+//let choice2 = "fu";
+//let choice3 = "mi";
 
-
+function compare(){
+    if (choice1===resultRandomIaChoice()) {
+        console.log("EGALITE")
+    }
+    else if (choice1==="shi" && resultRandomIaChoice()==="fu"){
+        console.log("YOU WIN")
+    }
+}
 
 
     
 
 
 //console.log(resultRandomIaChoice());
+console.log(compare())
