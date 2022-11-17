@@ -16,6 +16,7 @@ let arrayIaChoice = ["shi","fu","mi"];
 function resultRandomIaChoice() {
     let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
     return randomIaChoice
+<<<<<<< HEAD
 }    
 //console.log(resultRandomIaChoice());
 
@@ -41,4 +42,26 @@ function playerScore (playerChoice) {
 
 
 
+=======
+}
+let choice1 = "shi";
+//let choice2 = "fu";
+//let choice3 = "mi";
+
+function compare(){
+    if (choice1===resultRandomIaChoice()) {
+        console.log("EGALITE")
+    }
+    else if (choice1==="shi" && resultRandomIaChoice()==="fu"){
+        console.log("YOU WIN")
+    }
+}
+
+
+    
+
+
+//console.log(resultRandomIaChoice());
+console.log(compare())
+>>>>>>> 61de414a8da007203e91871b2bf7d747d5cfc858
 
