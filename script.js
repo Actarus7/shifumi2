@@ -36,23 +36,29 @@ function resultRandomIaChoice() {
     let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
     return randomIaChoice
 }
-let choice1 = "shi";
-//let choice2 = "fu";
-//let choice3 = "mi";
 
-function compare(){
-    if (choice1===resultRandomIaChoice()) {
-        console.log("EGALITE")
+function compare(choice){
+    if (choice===resultRandomIaChoice()) {
+        console.log("EGALITE");
     }
-    else if (choice1==="shi" && resultRandomIaChoice()==="fu"){
-        console.log("YOU WIN")
+    else if (choice==="shi" && resultRandomIaChoice()==="fu" || 
+            choice==="fu" && resultRandomIaChoice()==="mi" || 
+            choice==="mi" && resultRandomIaChoice()==="shi"){
+        console.log("YOU WIN");
+        ++scorePlayer;
+    }
+    else {
+        console.log("YOU LOOSE");
+        ++scoreIA;
     }
 }
+
+
 
 
     
 
 
 //console.log(resultRandomIaChoice());
-console.log(compare())
+console.log(compare("mi"))
 
