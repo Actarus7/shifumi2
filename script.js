@@ -13,17 +13,17 @@ mi.addEventListener('click', () => console.log('mi'));
 
 
 
-function playerScore () {
-
-    if (shi.addEventListener('click', () => console.log('shi')) = 'shi') {
+function playerScore (playerChoice) {
+    if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
         playerChoice = 'shi';
     }
-    else if (fu.addEventListener('click', () => console.log('fu')) = 'fu') {
+    else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
         playerChoice = 'fu';
     }
+    else if (mi.addEventListener('click', () => console.log('mi'))){
+        playerChoice = 'mi';}
     else {
-        playerChoice = 'mi';
+        return playerChoice
     }
-    
 }
 console.log(playerScore())
