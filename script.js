@@ -11,6 +11,22 @@ mi.addEventListener('click', () => miPlayer());
 
 // Pour le reste, a vous de jouer 
 
+function shiPlayer () {
+    player.src = "/img/shi.png";  
+    compare("shi");
+    restartGame();
+}
+function fuPlayer () {
+    player.src = "/img/fu.png";  
+    compare("fu");
+    restartGame();
+}
+function miPlayer () {
+    player.src = "/img/mi.png";  
+    compare("mi");
+    restartGame();
+}
+
 let arrayIaChoice = ["shi","fu","mi"];
 let scoreIA = 0
 let scorePlayer = 0
@@ -27,14 +43,13 @@ function resultRandomIaChoice() {
 function playerScore (playerChoice) {
     if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
         player.setAttribute(src = "/img/shi.png"); 
+        
         playerChoice = 'shi';
     }
     else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
-        //player.src="/img/fu.png";
         playerChoice = 'fu';
     }
     else if (mi.addEventListener('click', () => console.log('mi'))){
-        //player.src="/img/mi.png";
         playerChoice = 'mi';}
     else {
         return playerChoice
@@ -45,46 +60,40 @@ function playerScore (playerChoice) {
 
 function compare(choice){
     let IAChoice = resultRandomIaChoice();
+    ia.setAttribute("src",`/img/${IAChoice}.png`)
     if (choice===IAChoice) {
         console.log(choice + "/" + IAChoice);
         console.log("EGALITE");
         console.log(scorePlayer + " - " + scoreIA)
     }
     else if (choice==="shi" && IAChoice==="fu" || 
-            choice==="fu" && IAChoice==="mi" || 
-            choice==="mi" && IAChoice==="shi"){
+    choice==="fu" && IAChoice==="mi"  || 
+    choice==="mi" && IAChoice==="shi"){
         console.log(choice + "/" + IAChoice);
         console.log("YOU WIN");
+        ++game
+        document.getElementById('score-player').innerHTML = ++scorePlayer;
         console.log(scorePlayer + " - " + scoreIA)
     }
     else {
         console.log(choice + "/" + IAChoice);
         console.log("YOU LOOSE");
+        ++game
+        document.getElementById('score-ia').innerHTML = ++scoreIA;
         console.log(scorePlayer + " - " + scoreIA)
     }
 }
 
 
-function shiPlayer () {
-    compare("shi")
-}
-
-function fuPlayer () {
-    compare("fu")
-}
-
-function miPlayer () {
-    compare("mi")
-}
-
 //console.log(resultRandomIaChoice());
 //console.log(compare("shi"))
 
 function restartGame() {
+    console.log(game)
     if (game === 3 || scoreIA === 2 || scorePlayer === 2) {
         console.log('PARTIE TERMINEE');
     }
     else {
-        
+        console.log('LA PARTIE CONTINUE')   
     }
 }
