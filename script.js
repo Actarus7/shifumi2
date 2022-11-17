@@ -4,30 +4,29 @@ const mi = document.getElementById('mi');
 const player = document.getElementById('player');
 const ia = document.getElementById('ia');
 const command = document.getElementById('command');
-const restart = document.getElementById('restart');
-const bttnRestart = document.getElementById('restart');
+const buttonRestart = document.getElementById('restart');
 
 shi.addEventListener('click', () => shiPlayer());
 fu.addEventListener('click', () => fuPlayer());
 mi.addEventListener('click', () => miPlayer());
-restart.addEventListener('click', () => buttonRestart());
+restart.addEventListener('click', () => restartGame());
 
 // Pour le reste, a vous de jouer 
 
 function shiPlayer () {
     player.src = "/img/shi.png";  
     compare("shi");
-    restartGame();
+    endGame();
 }
 function fuPlayer () {
     player.src = "/img/fu.png";  
     compare("fu");
-    restartGame();
+    endGame();
 }
 function miPlayer () {
     player.src = "/img/mi.png";  
     compare("mi");
-    restartGame();
+    endGame();
 }
 
 let arrayIaChoice = ["shi","fu","mi"];
@@ -40,26 +39,21 @@ function resultRandomIaChoice() {
     let randomIaChoice = arrayIaChoice[Math.floor(Math.random()*arrayIaChoice.length)] 
     return randomIaChoice
 }    
-//console.log(resultRandomIaChoice());
 
 
 function playerScore (playerChoice) {
-    if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
-        player.setAttribute(src = "/img/shi.png"); 
-        
+    if (shi.addEventListener('click', () => '')) {
         playerChoice = 'shi';
     }
-    else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
+    else if (fu.addEventListener('click', () =>'')) {
         playerChoice = 'fu';
     }
-    else if (mi.addEventListener('click', () => console.log('mi'))){
+    else if (mi.addEventListener('click', () => '')){
         playerChoice = 'mi';}
     else {
         return playerChoice
     }
 }
-//console.log(playerScore())
-
 
 function compare(choice){
     let IAChoice = resultRandomIaChoice();
@@ -87,33 +81,24 @@ function compare(choice){
     }
 }
 
-
-//console.log(resultRandomIaChoice());
-//console.log(compare("shi"))
-
-function restartGame() {
+function endGame() {
     console.log(game)
     if (game === 3 || scoreIA === 2 || scorePlayer === 2) {
         console.log('PARTIE TERMINEE');
-        game = 0;
-        scoreIA = 0;
-        scorePlayer = 0;
-        document.getElementById('score-ia').innerHTML = 0;
-        document.getElementById('score-player').innerHTML = 0;
-        document.getElementById("command").hidden = true;
-        restart.setAttribute("class","btn-restart")
+        command.hidden = true;
+        buttonRestart.setAttribute("class","btn-restart")
     }
     else {
         console.log('LA PARTIE CONTINUE')   
     }
 }
 
-
-
-function buttonRestart() {
+function restartGame() {
     game = 0;
     scoreIA = 0;
     scorePlayer = 0;
-    bttnRestart.setAttribute("class", "hidden btn-restart");
+    document.getElementById('score-ia').innerHTML = 0;
+    document.getElementById('score-player').innerHTML = 0;
+    buttonRestart.setAttribute("class", "hidden btn-restart");
     command.hidden = false;
 }
