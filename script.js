@@ -4,10 +4,13 @@ const mi = document.getElementById('mi');
 const player = document.getElementById('player');
 const ia = document.getElementById('ia');
 const command = document.getElementById('command');
+const restart = document.getElementById('restart');
+const bttnRestart = document.getElementById('restart');
 
 shi.addEventListener('click', () => shiPlayer());
 fu.addEventListener('click', () => fuPlayer());
 mi.addEventListener('click', () => miPlayer());
+restart.addEventListener('click', () => buttonRestart());
 
 // Pour le reste, a vous de jouer 
 
@@ -101,4 +104,14 @@ function restartGame() {
     else {
         console.log('LA PARTIE CONTINUE')   
     }
+}
+
+
+
+function buttonRestart() {
+    game = 0;
+    scoreIA = 0;
+    scorePlayer = 0;
+    bttnRestart.setAttribute("class", "hidden btn-restart");
+    command.hidden = false;
 }
