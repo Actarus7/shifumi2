@@ -12,6 +12,24 @@ mi.addEventListener('click', () => console.log('mi'));
 // Pour le reste, a vous de jouer
 
 
+
+
+function playerScore (playerChoice) {
+    if (shi.addEventListener('click', () => console.log('shi')) == 'shi') {
+        playerChoice = 'shi';
+    }
+    else if (fu.addEventListener('click', () => console.log('fu')) == 'fu') {
+        playerChoice = 'fu';
+    }
+    else if (mi.addEventListener('click', () => console.log('mi'))){
+        playerChoice = 'mi';}
+    else {
+        return playerChoice
+    }
+}
+console.log(playerScore())
+
+
 let arrayIaChoice = ["shi","fu","mi"];
 
 function resultRandomIaChoice() {
@@ -37,3 +55,4 @@ function compare(){
 
 //console.log(resultRandomIaChoice());
 console.log(compare())
+
