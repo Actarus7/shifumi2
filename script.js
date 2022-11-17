@@ -14,6 +14,7 @@ mi.addEventListener('click', () => miPlayer());
 let arrayIaChoice = ["shi","fu","mi"];
 let scoreIA = 0
 let scorePlayer = 0
+let game = 0
 
 
 function resultRandomIaChoice() {
@@ -54,13 +55,11 @@ function compare(choice){
             choice==="mi" && IAChoice==="shi"){
         console.log(choice + "/" + IAChoice);
         console.log("YOU WIN");
-        ++scorePlayer;
         console.log(scorePlayer + " - " + scoreIA)
     }
     else {
         console.log(choice + "/" + IAChoice);
         console.log("YOU LOOSE");
-        ++scoreIA;
         console.log(scorePlayer + " - " + scoreIA)
     }
 }
@@ -81,3 +80,11 @@ function miPlayer () {
 //console.log(resultRandomIaChoice());
 //console.log(compare("shi"))
 
+function restartGame() {
+    if (game === 3 || scoreIA === 2 || scorePlayer === 2) {
+        console.log('PARTIE TERMINEE');
+    }
+    else {
+        
+    }
+}
