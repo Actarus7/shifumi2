@@ -11,20 +11,20 @@ fu.addEventListener('click', () => fuPlayer());
 mi.addEventListener('click', () => miPlayer());
 buttonRestart.addEventListener('click', () => restartGame());
 
-// Pour le reste, a vous de jouer 
+
 
 function shiPlayer () {
-    player.src = "/img/shi.png";  
+    player.src = "./img/shi.png";  
     compare("shi");
     endGame();
 }
 function fuPlayer () {
-    player.src = "/img/fu.png";  
+    player.src = "./img/fu.png";  
     compare("fu");
     endGame();
 }
 function miPlayer () {
-    player.src = "/img/mi.png";  
+    player.src = "./img/mi.png";  
     compare("mi");
     endGame();
 }
@@ -95,7 +95,7 @@ function endGame() {
 
 function restartGame() {
     game = 0;
-    scoreIA = 0;
+    scoreIA = 0;7777
     scorePlayer = 0;
     document.getElementById('score-ia').innerHTML = 0;
     document.getElementById('score-player').innerHTML = 0;
