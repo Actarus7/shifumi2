@@ -9,7 +9,7 @@ const buttonRestart = document.getElementById('restart');
 shi.addEventListener('click', () => shiPlayer());
 fu.addEventListener('click', () => fuPlayer());
 mi.addEventListener('click', () => miPlayer());
-restart.addEventListener('click', () => restartGame());
+buttonRestart.addEventListener('click', () => restartGame());
 
 // Pour le reste, a vous de jouer 
 
