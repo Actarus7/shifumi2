@@ -57,7 +57,7 @@ function playerScore (playerChoice) {
 
 function compare(choice){
     let IAChoice = resultRandomIaChoice();
-    ia.setAttribute("src",`/img/${IAChoice}.png`)
+    ia.setAttribute("src",`./img/${IAChoice}.png`)
     if (choice===IAChoice) {
         console.log(choice + "/" + IAChoice);
         console.log("EGALITE");
