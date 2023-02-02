@@ -40,21 +40,6 @@ function resultRandomIaChoice() {
     return randomIaChoice
 }    
 
-
-function playerScore (playerChoice) {
-    if (shi.addEventListener('click', () => '')) {
-        playerChoice = 'shi';
-    }
-    else if (fu.addEventListener('click', () =>'')) {
-        playerChoice = 'fu';
-    }
-    else if (mi.addEventListener('click', () => '')){
-        playerChoice = 'mi';}
-    else {
-        return playerChoice
-    }
-}
-
 function compare(choice){
     let IAChoice = resultRandomIaChoice();
     ia.setAttribute("src",`./img/${IAChoice}.png`)
